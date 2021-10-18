@@ -1,0 +1,98 @@
+<!-- 
+    Rules that are applied by default before using positioning:
+    1: Width and height are determined by the content.
+    With block elements even though they take up 100% of the width the height is still determined by the content.
+    2: Elements are placed top to bottom determined by the html code.
+    3: Child elements sit ontop of their parents. ie the children are closer to the viewer than the parent.
+
+    Position property types
+
+        Static #Follows the above rules to place your elements. html with no css applied
+
+        Relative # Position the elements relative to how it would have be positioned if it where static. 
+                    i.e that starting point would be the static position.
+                    After setting the position property use the coordinates
+                    Top Bottom Left Right to move the element.
+                    Rules that apply to relative positioning.
+                        a. if any of the cordinate properties are applied the space which is created stays and the moved
+                        element dosent affect the elements around it.
+                        b. if for example you say position: relative then top: 50px It will be like applying a 50px margin to the top
+                            of your element from where its supposed to be to the new top position. so the element will be pushed down
+                            and there will be a space of 50px.
+        Absulute # Elements are positioned relative to the parent. eg Position: absulute; right: 50px will mean position the element 50px
+                    from the right of the parent
+                    Rules.
+                        absulute positioning affects the flow. Moving and element using absulute positioning is like removing the element 
+                        from the natural order of things. This causes the surrounding elents to shift and take its place.
+
+                        if the parent is not the body to use containers to fine tune the location.
+        Fixed# Position the elements to a fixed location.
+        
+    See if you can move the boxes to create the image attached (complete_flag) using 
+    only the position property. ie relative absulute and static.
+
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css
+    ">
+    <title>CSS Positioning</title>
+    <style>
+        body {
+            margin: 100px auto;
+        }
+
+        .parent {
+            width: 500px;
+            border: 1px solid red;
+            margin: auto;
+            text-align: center;
+            background-color: beige;
+            padding: 0;
+        }
+
+        .child {
+            border-radius: 10%;
+            width: 100px;
+            height: 100px;
+            margin: 0;
+        }
+
+        .one {
+            background-color: red;
+
+
+
+        }
+
+        .three {
+            background-color: red;
+
+        }
+
+
+        img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child one">One</div>
+        <img src="imaple_img.png" alt="maple leaf">
+        <div class="child three">Three</div>
+
+
+    </div>
+</body>
+
+</html>
